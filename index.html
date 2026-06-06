@@ -75,6 +75,39 @@
             .pub-link:hover {
                 text-decoration: underline;
             }
+
+            /* Architecture Flow Styles */
+            .architecture-flow {
+                margin-bottom: 24px;
+                padding: 20px;
+                background: var(--surface-2);
+                border-radius: 6px;
+                border: 1px solid var(--border);
+            }
+            .flow-steps {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                flex-wrap: wrap;
+                margin-top: 16px;
+            }
+            .flow-item {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 8px 12px;
+                background: var(--surface);
+                border-radius: 4px;
+                border: 1px solid var(--border-2);
+            }
+            .flow-item span:first-child {
+                font-size: 14px;
+            }
+            .flow-item span:last-child {
+                font-family: var(--font-mono);
+                font-size: 11px;
+                color: var(--text);
+            }
         </style>
 
         <link
@@ -90,8 +123,8 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#stack" class="nav-link">Stack</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#devops" class="nav-link">DevOps</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#learning" class="nav-link">Learning</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -210,7 +243,392 @@
                 </div>
             </section>
 
-            <!-- UPDATED: Backend Projects Section -->
+            <!-- DEVOPS PROJECTS SECTION (NOW FIRST) -->
+            <section class="section" id="devops">
+                <h2>DevOps Projects</h2>
+
+                <!-- Featured DevOps Project -->
+                <article
+                    class="project-card featured"
+                    style="margin-bottom: 32px">
+                    <div class="project-header">
+                        <div>
+                            <span class="project-badge">Featured</span>
+                            <h3 class="project-title">
+                                K8s-MasterStack — Cloud-Native 3-Tier App
+                            </h3>
+                        </div>
+                        <a
+                            href="https://github.com/mostafizur-raahman/K8s-MasterStack-Cloud-Native-3-Tier-App"
+                            target="_blank"
+                            rel="noopener"
+                            class="project-link-icon"
+                            aria-label="View on GitHub">
+                            <svg
+                                width="18"
+                                height="18"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <polyline points="15 3 21 3 21 9" />
+                                <line x1="10" y1="14" x2="21" y2="3" />
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="project-desc">
+                        A scalable, cloud-native three-tier web application
+                        deployed on AWS EKS. The architecture features a
+                        React.js frontend, a Node.js backend, and a MongoDB
+                        database, fully containerized with Docker. The
+                        deployment lifecycle is automated using Kubernetes
+                        manifests, with traffic management and public access
+                        handled via the AWS Load Balancer Controller and Ingress
+                        routing.
+                    </p>
+
+                    <!-- Architecture Flow -->
+                    <div class="architecture-flow">
+                        <div class="pipeline-label">Architecture Flow</div>
+                        <div class="flow-steps">
+                            <div class="flow-item">
+                                <span style="color: var(--accent)">⚛</span>
+                                <span>React</span>
+                            </div>
+                            <div style="color: var(--text-faint)">→</div>
+                            <div class="flow-item">
+                                <span style="color: var(--accent)">🐳</span>
+                                <span>Docker</span>
+                            </div>
+                            <div style="color: var(--text-faint)">→</div>
+                            <div class="flow-item">
+                                <span style="color: #ff9900">☸</span>
+                                <span>EKS</span>
+                            </div>
+                            <div style="color: var(--text-faint)">→</div>
+                            <div class="flow-item">
+                                <span style="color: #326ce5">⚖</span>
+                                <span>ALB Ingress</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-highlights">
+                        <div class="highlight">
+                            <span class="highlight-icon">&#9650;</span>
+                            <div>
+                                <strong>3-Tier Architecture</strong>
+                                <span
+                                    >React.js + Node.js + MongoDB — fully
+                                    decoupled, containerized layers</span
+                                >
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">&#9650;</span>
+                            <div>
+                                <strong>Orchestration on AWS EKS</strong>
+                                <span
+                                    >Deployment lifecycle automated using
+                                    Kubernetes manifests, eksctl, and Helm</span
+                                >
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">&#9650;</span>
+                            <div>
+                                <strong>Advanced Networking & Routing</strong>
+                                <span
+                                    >Traffic management and public access via
+                                    AWS ALB and Ingress Controller</span
+                                >
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">&#9650;</span>
+                            <div>
+                                <strong>Cloud-Native Scalability</strong>
+                                <span
+                                    >Fully containerized with Docker on a
+                                    scalable AWS EKS cluster</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-tags">
+                        <span class="tag sm">React.js</span>
+                        <span class="tag sm">Node.js</span>
+                        <span class="tag sm">MongoDB</span>
+                        <span class="tag sm">Docker</span>
+                        <span class="tag sm">AWS EKS</span>
+                        <span class="tag sm">Kubernetes</span>
+                        <span class="tag sm">Helm</span>
+                        <span class="tag sm">AWS ALB</span>
+                    </div>
+                </article>
+
+                <!-- Other DevOps Projects Grid -->
+                <div class="devops-grid">
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>EKS Auto Mode Cluster Provisioning</h3>
+                        </div>
+                        <p>
+                            Production-grade Kubernetes cluster on AWS EKS Auto
+                            Mode using Terraform. Includes VPC with
+                            public/private subnets, managed node groups, IAM
+                            IRSA, and cluster autoscaler configuration.
+                        </p>
+                        <div class="architecture-flow">
+                            <div class="flow-steps">
+                                <div class="flow-item">
+                                    <span style="color: #7b42bc">📜</span>
+                                    <span>Terraform</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #ff9900">☁</span>
+                                    <span>AWS VPC</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #ff9900">☸</span>
+                                    <span>EKS</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: var(--accent)">⚙</span>
+                                    <span>Node Groups</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devops-tags">
+                            <span class="tag sm">Terraform</span>
+                            <span class="tag sm">AWS EKS</span>
+                            <span class="tag sm">Kubernetes</span>
+                            <span class="tag sm">IAM</span>
+                        </div>
+                    </article>
+
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>GitOps Deployment with ArgoCD</h3>
+                        </div>
+                        <p>
+                            Implemented GitOps workflow using ArgoCD for
+                            continuous delivery. App-of-apps pattern with Helm
+                            charts, automated sync policies, and rollback
+                            capabilities for multi-environment deployments.
+                        </p>
+                        <div class="architecture-flow">
+                            <div class="flow-steps">
+                                <div class="flow-item">
+                                    <span style="color: var(--text)">📂</span>
+                                    <span>Git Repo</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #ef7b4d">⚓</span>
+                                    <span>ArgoCD</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #0f1689">⎈</span>
+                                    <span>Helm</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #ff9900">☸</span>
+                                    <span>K8s</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devops-tags">
+                            <span class="tag sm">ArgoCD</span>
+                            <span class="tag sm">Helm</span>
+                            <span class="tag sm">Kubernetes</span>
+                            <span class="tag sm">GitOps</span>
+                        </div>
+                    </article>
+
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>Observability Stack — Prometheus + Grafana</h3>
+                        </div>
+                        <p>
+                            Deployed a full observability platform using
+                            kube-prometheus-stack. Custom dashboards for service
+                            SLOs, Loki for log aggregation, and Alertmanager for
+                            PagerDuty/Slack alerting.
+                        </p>
+                        <div class="architecture-flow">
+                            <div class="flow-steps">
+                                <div class="flow-item">
+                                    <span style="color: #ff9900">☸</span>
+                                    <span>K8s</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #e6522c">📊</span>
+                                    <span>Prometheus</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #f46800">📈</span>
+                                    <span>Grafana</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #ff9900">🔔</span>
+                                    <span>Alerts</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devops-tags">
+                            <span class="tag sm">Prometheus</span>
+                            <span class="tag sm">Grafana</span>
+                            <span class="tag sm">Loki</span>
+                            <span class="tag sm">Alertmanager</span>
+                        </div>
+                    </article>
+
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>Multi-Service Kafka Event Pipeline</h3>
+                        </div>
+                        <p>
+                            Designed an event-driven microservices architecture
+                            using Kafka as the backbone. Producer/consumer
+                            services in Go with schema registry, dead-letter
+                            queues, and consumer group rebalancing.
+                        </p>
+                        <div class="architecture-flow">
+                            <div class="flow-steps">
+                                <div class="flow-item">
+                                    <span style="color: var(--accent)">📤</span>
+                                    <span>Producers</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #231f20">📨</span>
+                                    <span>Kafka</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: var(--accent)">📥</span>
+                                    <span>Consumers</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #ff6b6b">⚠</span>
+                                    <span>DLQ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devops-tags">
+                            <span class="tag sm">Kafka</span>
+                            <span class="tag sm">Go</span>
+                            <span class="tag sm">Docker</span>
+                            <span class="tag sm">Microservices</span>
+                        </div>
+                    </article>
+
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>
+                                Pulumi IaC — Cloud Infrastructure Automation
+                            </h3>
+                        </div>
+                        <p>
+                            Infrastructure automation with Pulumi using
+                            TypeScript. Covers multi-region AWS deployments: ECS
+                            services, RDS clusters, S3/CloudFront, and secrets
+                            management with AWS Secrets Manager.
+                        </p>
+                        <div class="architecture-flow">
+                            <div class="flow-steps">
+                                <div class="flow-item">
+                                    <span style="color: #3178c6">📘</span>
+                                    <span>TypeScript</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #8a3393">⚡</span>
+                                    <span>Pulumi</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #ff9900">☁</span>
+                                    <span>AWS</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: var(--accent)">🐳</span>
+                                    <span>ECS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devops-tags">
+                            <span class="tag sm">Pulumi</span>
+                            <span class="tag sm">TypeScript</span>
+                            <span class="tag sm">AWS</span>
+                            <span class="tag sm">ECS</span>
+                        </div>
+                    </article>
+
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>DevSecOps CI/CD Pipeline</h3>
+                        </div>
+                        <p>
+                            10-stage GitHub Actions pipeline with integrated
+                            security gates: Trivy image scanning, Semgrep SAST,
+                            Checkov IaC linting, OWASP dependency audit, and
+                            automated SBOM generation.
+                        </p>
+                        <div class="architecture-flow">
+                            <div class="flow-steps">
+                                <div class="flow-item">
+                                    <span style="color: var(--text)">📂</span>
+                                    <span>Git Push</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #2088ff">⚙</span>
+                                    <span>GitHub Actions</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #ff6b6b">🔒</span>
+                                    <span>Security</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: var(--accent)">🚀</span>
+                                    <span>Deploy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="devops-tags">
+                            <span class="tag sm">GitHub Actions</span>
+                            <span class="tag sm">Trivy</span>
+                            <span class="tag sm">Semgrep</span>
+                            <span class="tag sm">OWASP</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- BACKEND PROJECTS SECTION (NOW SECOND) -->
             <section class="section" id="projects">
                 <h2>Backend Projects</h2>
                 <div class="projects-list">
@@ -261,6 +679,30 @@
                                 user sessions.
                             </li>
                         </ul>
+                        <div class="architecture-flow">
+                            <div class="pipeline-label">Architecture Flow</div>
+                            <div class="flow-steps">
+                                <div class="flow-item">
+                                    <span style="color: var(--accent)">👤</span>
+                                    <span>Client</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #e0234e">🔷</span>
+                                    <span>NestJS API</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #dc382d">⚡</span>
+                                    <span>Redis</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #336791">🐘</span>
+                                    <span>PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="project-tags">
                             <span class="tag sm">NestJS</span>
                             <span class="tag sm">PostgreSQL</span>
@@ -291,6 +733,30 @@
                                 workflows and data management.
                             </li>
                         </ul>
+                        <div class="architecture-flow">
+                            <div class="pipeline-label">Architecture Flow</div>
+                            <div class="flow-steps">
+                                <div class="flow-item">
+                                    <span style="color: var(--accent)">👤</span>
+                                    <span>Client</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #e0234e">🔷</span>
+                                    <span>NestJS API</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #336791">🐘</span>
+                                    <span>PostgreSQL</span>
+                                </div>
+                                <div style="color: var(--text-faint)">↔</div>
+                                <div class="flow-item">
+                                    <span style="color: #2d8cff">📹</span>
+                                    <span>Zoom</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="project-tags">
                             <span class="tag sm">NestJS</span>
                             <span class="tag sm">PostgreSQL</span>
@@ -321,6 +787,30 @@
                                 experience.
                             </li>
                         </ul>
+                        <div class="architecture-flow">
+                            <div class="pipeline-label">Architecture Flow</div>
+                            <div class="flow-steps">
+                                <div class="flow-item">
+                                    <span style="color: var(--accent)">👤</span>
+                                    <span>Client</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #e0234e">🔷</span>
+                                    <span>NestJS API</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #00b8d9">📨</span>
+                                    <span>NATS JetStream</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: var(--accent)">👨‍💼</span>
+                                    <span>Agents</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="project-tags">
                             <span class="tag sm">NestJS</span>
                             <span class="tag sm">PostgreSQL</span>
@@ -370,6 +860,30 @@
                                 operations.
                             </li>
                         </ul>
+                        <div class="architecture-flow">
+                            <div class="pipeline-label">Architecture Flow</div>
+                            <div class="flow-steps">
+                                <div class="flow-item">
+                                    <span style="color: var(--accent)">👤</span>
+                                    <span>Client</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #68a063">🟢</span>
+                                    <span>Express API</span>
+                                </div>
+                                <div style="color: var(--text-faint)">→</div>
+                                <div class="flow-item">
+                                    <span style="color: #4db33d">🍃</span>
+                                    <span>MongoDB</span>
+                                </div>
+                                <div style="color: var(--text-faint)">↔</div>
+                                <div class="flow-item">
+                                    <span style="color: #635bff">💳</span>
+                                    <span>Stripe</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="project-tags">
                             <span class="tag sm">Node.js</span>
                             <span class="tag sm">Express.js</span>
@@ -379,403 +893,6 @@
                 </div>
             </section>
 
-            <!-- UNCHANGED: DevOps Projects Section -->
-            <!-- <section class="section" id="devops">
-                <h2>DevOps Projects</h2>
-                <div class="devops-grid">
-                    <article class="devops-card">
-                        <div class="devops-card-header">
-                            <div class="devops-icon">&#9670;</div>
-                            <h3>EKS Auto Mode Cluster Provisioning</h3>
-                        </div>
-                        <p>
-                            Production-grade Kubernetes cluster on AWS EKS Auto
-                            Mode using Terraform. Includes VPC with
-                            public/private subnets, managed node groups, IAM
-                            IRSA, and cluster autoscaler configuration.
-                        </p>
-                        <div class="devops-tags">
-                            <span class="tag sm">Terraform</span>
-                            <span class="tag sm">AWS EKS</span>
-                            <span class="tag sm">Kubernetes</span>
-                            <span class="tag sm">IAM</span>
-                        </div>
-                    </article>
-
-                    <article class="devops-card">
-                        <div class="devops-card-header">
-                            <div class="devops-icon">&#9670;</div>
-                            <h3>GitOps Deployment with ArgoCD</h3>
-                        </div>
-                        <p>
-                            Implemented GitOps workflow using ArgoCD for
-                            continuous delivery. App-of-apps pattern with Helm
-                            charts, automated sync policies, and rollback
-                            capabilities for multi-environment deployments.
-                        </p>
-                        <div class="devops-tags">
-                            <span class="tag sm">ArgoCD</span>
-                            <span class="tag sm">Helm</span>
-                            <span class="tag sm">Kubernetes</span>
-                            <span class="tag sm">GitOps</span>
-                        </div>
-                    </article>
-
-                    <article class="devops-card">
-                        <div class="devops-card-header">
-                            <div class="devops-icon">&#9670;</div>
-                            <h3>Observability Stack — Prometheus + Grafana</h3>
-                        </div>
-                        <p>
-                            Deployed a full observability platform using
-                            kube-prometheus-stack. Custom dashboards for service
-                            SLOs, Loki for log aggregation, and Alertmanager for
-                            PagerDuty/Slack alerting.
-                        </p>
-                        <div class="devops-tags">
-                            <span class="tag sm">Prometheus</span>
-                            <span class="tag sm">Grafana</span>
-                            <span class="tag sm">Loki</span>
-                            <span class="tag sm">Alertmanager</span>
-                        </div>
-                    </article>
-
-                    <article class="devops-card">
-                        <div class="devops-card-header">
-                            <div class="devops-icon">&#9670;</div>
-                            <h3>Multi-Service Kafka Event Pipeline</h3>
-                        </div>
-                        <p>
-                            Designed an event-driven microservices architecture
-                            using Kafka as the backbone. Producer/consumer
-                            services in Go with schema registry, dead-letter
-                            queues, and consumer group rebalancing.
-                        </p>
-                        <div class="devops-tags">
-                            <span class="tag sm">Kafka</span>
-                            <span class="tag sm">Go</span>
-                            <span class="tag sm">Docker</span>
-                            <span class="tag sm">Microservices</span>
-                        </div>
-                    </article>
-
-                    <article class="devops-card">
-                        <div class="devops-card-header">
-                            <div class="devops-icon">&#9670;</div>
-                            <h3>
-                                Pulumi IaC — Cloud Infrastructure Automation
-                            </h3>
-                        </div>
-                        <p>
-                            Infrastructure automation with Pulumi using
-                            TypeScript. Covers multi-region AWS deployments: ECS
-                            services, RDS clusters, S3/CloudFront, and secrets
-                            management with AWS Secrets Manager.
-                        </p>
-                        <div class="devops-tags">
-                            <span class="tag sm">Pulumi</span>
-                            <span class="tag sm">TypeScript</span>
-                            <span class="tag sm">AWS</span>
-                            <span class="tag sm">ECS</span>
-                        </div>
-                    </article>
-
-                    <article class="devops-card">
-                        <div class="devops-card-header">
-                            <div class="devops-icon">&#9670;</div>
-                            <h3>DevSecOps CI/CD Pipeline</h3>
-                        </div>
-                        <p>
-                            10-stage GitHub Actions pipeline with integrated
-                            security gates: Trivy image scanning, Semgrep SAST,
-                            Checkov IaC linting, OWASP dependency audit, and
-                            automated SBOM generation.
-                        </p>
-                        <div class="devops-tags">
-                            <span class="tag sm">GitHub Actions</span>
-                            <span class="tag sm">Trivy</span>
-                            <span class="tag sm">Semgrep</span>
-                            <span class="tag sm">OWASP</span>
-                        </div>
-                    </article>
-                </div>
-            </section> -->
-
-            <section class="section" id="devops">
-                <h2>DevOps Projects</h2>
-
-                <!-- Featured DevOps Project -->
-                <article
-                    class="project-card featured"
-                    style="margin-bottom: 32px">
-                    <div class="project-header">
-                        <div>
-                            <span class="project-badge">Featured</span>
-                            <h3 class="project-title">
-                                CloudBlog — Production-Grade Blog Platform
-                            </h3>
-                        </div>
-                        <a
-                            href="https://github.com/mostafizur-raahman/CloudBlog--Production-Grade-Blog-Platform"
-                            target="_blank"
-                            rel="noopener"
-                            class="project-link-icon"
-                            aria-label="View on GitHub">
-                            <svg
-                                width="18"
-                                height="18"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                                <polyline points="15 3 21 3 21 9" />
-                                <line x1="10" y1="14" x2="21" y2="3" />
-                            </svg>
-                        </a>
-                    </div>
-                    <p class="project-desc">
-                        A production-ready 3-tier blog platform built with a
-                        React frontend, Node.js REST API, and PostgreSQL
-                        database. Designed for high availability and horizontal
-                        scalability on cloud-native infrastructure.
-                    </p>
-
-                    <div class="pipeline-steps">
-                        <div class="pipeline-label">
-                            CI/CD Pipeline — 10 Stages
-                        </div>
-                        <div class="pipeline">
-                            <div class="pipeline-step">
-                                <div class="step-dot"></div>
-                                <div class="step-name">Lint</div>
-                            </div>
-                            <div class="pipeline-connector"></div>
-                            <div class="pipeline-step">
-                                <div class="step-dot"></div>
-                                <div class="step-name">Unit Test</div>
-                            </div>
-                            <div class="pipeline-connector"></div>
-                            <div class="pipeline-step">
-                                <div class="step-dot"></div>
-                                <div class="step-name">Build</div>
-                            </div>
-                            <div class="pipeline-connector"></div>
-                            <div class="pipeline-step">
-                                <div class="step-dot"></div>
-                                <div class="step-name">SAST</div>
-                            </div>
-                            <div class="pipeline-connector"></div>
-                            <div class="pipeline-step">
-                                <div class="step-dot"></div>
-                                <div class="step-name">Container Scan</div>
-                            </div>
-                            <div class="pipeline-connector"></div>
-                            <div class="pipeline-step">
-                                <div class="step-dot"></div>
-                                <div class="step-name">Push Image</div>
-                            </div>
-                            <div class="pipeline-connector"></div>
-                            <div class="pipeline-step">
-                                <div class="step-dot"></div>
-                                <div class="step-name">IaC Validate</div>
-                            </div>
-                            <div class="pipeline-connector"></div>
-                            <div class="pipeline-step">
-                                <div class="step-dot"></div>
-                                <div class="step-name">Staging Deploy</div>
-                            </div>
-                            <div class="pipeline-connector"></div>
-                            <div class="pipeline-step">
-                                <div class="step-dot"></div>
-                                <div class="step-name">Integration Test</div>
-                            </div>
-                            <div class="pipeline-connector"></div>
-                            <div class="pipeline-step">
-                                <div class="step-dot active"></div>
-                                <div class="step-name">Prod Deploy</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-highlights">
-                        <div class="highlight">
-                            <span class="highlight-icon">&#9650;</span>
-                            <div>
-                                <strong>3-Tier Architecture</strong>
-                                <span
-                                    >React + Node.js + PostgreSQL — fully
-                                    decoupled layers</span
-                                >
-                            </div>
-                        </div>
-                        <div class="highlight">
-                            <span class="highlight-icon">&#9650;</span>
-                            <div>
-                                <strong>Kubernetes on AWS EKS Auto Mode</strong>
-                                <span
-                                    >Containerized with Docker, orchestrated
-                                    with HPA and rolling deploys</span
-                                >
-                            </div>
-                        </div>
-                        <div class="highlight">
-                            <span class="highlight-icon">&#9650;</span>
-                            <div>
-                                <strong
-                                    >Infrastructure as Code with
-                                    Terraform</strong
-                                >
-                                <span
-                                    >VPC, EKS cluster, IAM roles, and security
-                                    groups — all as code</span
-                                >
-                            </div>
-                        </div>
-                        <div class="highlight">
-                            <span class="highlight-icon">&#9650;</span>
-                            <div>
-                                <strong>DevSecOps Pipeline</strong>
-                                <span
-                                    >SAST, container image scanning, IaC
-                                    validation baked into CI/CD</span
-                                >
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-tags">
-                        <span class="tag sm">React</span>
-                        <span class="tag sm">Node.js</span>
-                        <span class="tag sm">PostgreSQL</span>
-                        <span class="tag sm">Docker</span>
-                        <span class="tag sm">Kubernetes</span>
-                        <span class="tag sm">AWS EKS</span>
-                        <span class="tag sm">Terraform</span>
-                        <span class="tag sm">GitHub Actions</span>
-                    </div>
-                </article>
-
-                <!-- Other DevOps Projects Grid -->
-                <div class="devops-grid">
-                    <article class="devops-card">
-                        <div class="devops-card-header">
-                            <div class="devops-icon">&#9670;</div>
-                            <h3>EKS Auto Mode Cluster Provisioning</h3>
-                        </div>
-                        <p>
-                            Production-grade Kubernetes cluster on AWS EKS Auto
-                            Mode using Terraform. Includes VPC with
-                            public/private subnets, managed node groups, IAM
-                            IRSA, and cluster autoscaler configuration.
-                        </p>
-                        <div class="devops-tags">
-                            <span class="tag sm">Terraform</span>
-                            <span class="tag sm">AWS EKS</span>
-                            <span class="tag sm">Kubernetes</span>
-                            <span class="tag sm">IAM</span>
-                        </div>
-                    </article>
-
-                    <article class="devops-card">
-                        <div class="devops-card-header">
-                            <div class="devops-icon">&#9670;</div>
-                            <h3>GitOps Deployment with ArgoCD</h3>
-                        </div>
-                        <p>
-                            Implemented GitOps workflow using ArgoCD for
-                            continuous delivery. App-of-apps pattern with Helm
-                            charts, automated sync policies, and rollback
-                            capabilities for multi-environment deployments.
-                        </p>
-                        <div class="devops-tags">
-                            <span class="tag sm">ArgoCD</span>
-                            <span class="tag sm">Helm</span>
-                            <span class="tag sm">Kubernetes</span>
-                            <span class="tag sm">GitOps</span>
-                        </div>
-                    </article>
-
-                    <article class="devops-card">
-                        <div class="devops-card-header">
-                            <div class="devops-icon">&#9670;</div>
-                            <h3>Observability Stack — Prometheus + Grafana</h3>
-                        </div>
-                        <p>
-                            Deployed a full observability platform using
-                            kube-prometheus-stack. Custom dashboards for service
-                            SLOs, Loki for log aggregation, and Alertmanager for
-                            PagerDuty/Slack alerting.
-                        </p>
-                        <div class="devops-tags">
-                            <span class="tag sm">Prometheus</span>
-                            <span class="tag sm">Grafana</span>
-                            <span class="tag sm">Loki</span>
-                            <span class="tag sm">Alertmanager</span>
-                        </div>
-                    </article>
-
-                    <article class="devops-card">
-                        <div class="devops-card-header">
-                            <div class="devops-icon">&#9670;</div>
-                            <h3>Multi-Service Kafka Event Pipeline</h3>
-                        </div>
-                        <p>
-                            Designed an event-driven microservices architecture
-                            using Kafka as the backbone. Producer/consumer
-                            services in Go with schema registry, dead-letter
-                            queues, and consumer group rebalancing.
-                        </p>
-                        <div class="devops-tags">
-                            <span class="tag sm">Kafka</span>
-                            <span class="tag sm">Go</span>
-                            <span class="tag sm">Docker</span>
-                            <span class="tag sm">Microservices</span>
-                        </div>
-                    </article>
-
-                    <article class="devops-card">
-                        <div class="devops-card-header">
-                            <div class="devops-icon">&#9670;</div>
-                            <h3>
-                                Pulumi IaC — Cloud Infrastructure Automation
-                            </h3>
-                        </div>
-                        <p>
-                            Infrastructure automation with Pulumi using
-                            TypeScript. Covers multi-region AWS deployments: ECS
-                            services, RDS clusters, S3/CloudFront, and secrets
-                            management with AWS Secrets Manager.
-                        </p>
-                        <div class="devops-tags">
-                            <span class="tag sm">Pulumi</span>
-                            <span class="tag sm">TypeScript</span>
-                            <span class="tag sm">AWS</span>
-                            <span class="tag sm">ECS</span>
-                        </div>
-                    </article>
-
-                    <article class="devops-card">
-                        <div class="devops-card-header">
-                            <div class="devops-icon">&#9670;</div>
-                            <h3>DevSecOps CI/CD Pipeline</h3>
-                        </div>
-                        <p>
-                            10-stage GitHub Actions pipeline with integrated
-                            security gates: Trivy image scanning, Semgrep SAST,
-                            Checkov IaC linting, OWASP dependency audit, and
-                            automated SBOM generation.
-                        </p>
-                        <div class="devops-tags">
-                            <span class="tag sm">GitHub Actions</span>
-                            <span class="tag sm">Trivy</span>
-                            <span class="tag sm">Semgrep</span>
-                            <span class="tag sm">OWASP</span>
-                        </div>
-                    </article>
-                </div>
-            </section>
             <!-- NEW: Education & Publications Section -->
             <section class="section" id="education">
                 <h2>Education & Publications</h2>
