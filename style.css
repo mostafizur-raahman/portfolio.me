@@ -141,16 +141,51 @@ nav {
 
 /* ─── LAYOUT ─────────────────────────────────────── */
 main {
-    max-width: 760px;
+    max-width: 860px; /* Increased slightly to give the hero layout more breathing room */
     margin: 0 auto;
     padding: 56px 24px 80px;
 }
 
 /* ─── HERO ───────────────────────────────────────── */
 .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
     padding: 72px 0 80px;
     border-bottom: 1px solid var(--border);
     margin-bottom: 80px;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 0; /* Prevents text from overflowing the flex container */
+}
+
+.hero-image {
+    flex-shrink: 0;
+    width: 220px;
+    height: 220px;
+    border-radius: 16px; /* Change to 50% if you want a perfect circle */
+    overflow: hidden;
+    border: 1px solid var(--border-2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-dim);
+    box-shadow: 0 15px 40px rgba(34, 197, 94, 0.1);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .hero h1 {
@@ -571,9 +606,30 @@ footer p {
         padding: 56px 16px 60px;
     }
 
+    /* UPDATED HERO MOBILE STYLES */
     .hero {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 32px;
         padding: 48px 0 56px;
         margin-bottom: 56px;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-image {
+        width: 160px;
+        height: 160px;
+        order: -1; /* Moves the image to the top on mobile screens */
+    }
+
+    .hero-tags {
+        justify-content: center;
     }
 
     .hero h1 {
