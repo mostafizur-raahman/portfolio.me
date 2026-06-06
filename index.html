@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mostafizur Rahman — Backend & Devops Engineer</title>
+        <meta
+            name="description"
+            content="Mostafizur Rahman — Backend Engineer specializing in distributed systems, cloud infrastructure, and DevOps." />
+        <link rel="stylesheet" href="style.css" />
+
+        <!-- Additional styles for new sections -->
+        <style>
+            /* Projects List Description */
+            .project-desc-list {
+                color: var(--text-muted);
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
+                padding-left: 1.2rem;
+            }
+            .project-desc-list li {
+                margin-bottom: 0.5rem;
+            }
+
+            /* Education & Publications Grid */
+            .edu-pub-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1.5rem;
+            }
+            .edu-card {
+                background: var(--card-bg);
+                border: 1px solid var(--border-color);
+                border-radius: 12px;
+                padding: 1.5rem;
+                transition:
+                    transform 0.2s,
+                    border-color 0.2s;
+            }
+            .edu-card:hover {
+                transform: translateY(-4px);
+                border-color: var(--accent-color);
+            }
+            .edu-card-header {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                margin-bottom: 1rem;
+            }
+            .edu-card-header h3 {
+                margin: 0;
+                font-size: 1.25rem;
+            }
+            .edu-item h4,
+            .pub-item h4 {
+                margin: 0 0 0.25rem 0;
+                font-size: 1.1rem;
+            }
+            .edu-degree {
+                color: var(--text-muted);
+                margin: 0 0 0.25rem 0;
+            }
+            .edu-date,
+            .edu-cgpa {
+                color: var(--text-muted);
+                font-size: 0.9rem;
+                margin: 0.25rem 0;
+            }
+            .pub-link {
+                color: var(--accent-color);
+                text-decoration: none;
+                font-size: 0.9rem;
+                word-break: break-all;
+            }
+            .pub-link:hover {
+                text-decoration: underline;
+            }
+        </style>
+
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙</text></svg>" />
+    </head>
+    <body>
+        <nav id="navbar">
+            <span class="nav-name">MR</span>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#stack" class="nav-link">Stack</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#devops" class="nav-link">DevOps</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#learning" class="nav-link">Learning</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <a
+                        href="https://github.com/mostafizur-raahman"
+                        target="_blank"
+                        rel="noopener"
+                        class="nav-link nav-gh"
+                        >GitHub</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="hero" id="about">
+                <h1>Mostafizur Rahman</h1>
+                <p class="hero-subtitle">Backend & DevOps Engineer</p>
+                <p class="hero-desc">
+                    Building resilient scalable systems and cloud
+                    infrastructure. Focused on performance, reliability, and
+                    clean architecture at scale.
+                </p>
+                <div class="hero-tags">
+                    <span class="tag">Go</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Terraform</span>
+                </div>
+            </section>
+
+            <section class="section" id="stack">
+                <h2>Tech Stack</h2>
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>Go</li>
+                            <li>Node.js</li>
+                            <li>TypeScript</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Frameworks</h3>
+                        <ul>
+                            <li>NestJS</li>
+                            <li>Express</li>
+                            <li>Gin</li>
+                            <li>Fiber</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Databases</h3>
+                        <ul>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                            <li>Redis</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Message Brokers</h3>
+                        <ul>
+                            <li>Kafka</li>
+                            <li>RabbitMQ</li>
+                            <li>NATS</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Orchestration</h3>
+                        <ul>
+                            <li>Kubernetes</li>
+                            <li>EKS / GKE / AKS</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>CI/CD & GitOps</h3>
+                        <ul>
+                            <li>ArgoCD</li>
+                            <li>GitHub Actions</li>
+                            <li>GitLab CI</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Infrastructure</h3>
+                        <ul>
+                            <li>Pulumi</li>
+                            <li>AWS CDK</li>
+                            <li>Terraform</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Observability</h3>
+                        <ul>
+                            <li>Prometheus</li>
+                            <li>Loki</li>
+                            <li>Grafana</li>
+                        </ul>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Security</h3>
+                        <ul>
+                            <li>OAuth2</li>
+                            <li>JWT</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- UPDATED: Backend Projects Section -->
+            <section class="section" id="projects">
+                <h2>Backend Projects</h2>
+                <div class="projects-list">
+                    <!-- ZAAG Shop -->
+                    <article class="project-card featured">
+                        <div class="project-header">
+                            <div>
+                                <span class="project-badge">Featured</span>
+                                <h3 class="project-title">
+                                    ZAAG Shop (Multi-Tenant E-commerce SaaS)
+                                </h3>
+                            </div>
+                            <a
+                                href="https://zaagshop.com"
+                                target="_blank"
+                                rel="noopener"
+                                class="project-link-icon"
+                                aria-label="View Live">
+                                <svg
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                        </div>
+                        <ul class="project-desc-list">
+                            <li>
+                                Built a multi-tenant e-commerce SaaS platform
+                                enabling multiple vendors to create and manage
+                                independent online stores.
+                            </li>
+                            <li>
+                                Implemented backend modules for product
+                                management, order processing, and checkout using
+                                a modular NestJS architecture.
+                            </li>
+                            <li>
+                                Optimized backend performance of an e-commerce
+                                system by 39% using in-memory caching for
+                                high-demand endpoints such as product pages and
+                                user sessions.
+                            </li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag sm">NestJS</span>
+                            <span class="tag sm">PostgreSQL</span>
+                            <span class="tag sm">Redis</span>
+                        </div>
+                    </article>
+
+                    <!-- Sheba-Plus -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Sheba-Plus</h3>
+                            </div>
+                        </div>
+                        <ul class="project-desc-list">
+                            <li>
+                                Developed an online shopping platform where
+                                users can hire agents to purchase products on
+                                their behalf.
+                            </li>
+                            <li>
+                                Integrated Zoom-based communication for
+                                real-time interaction between users and shopping
+                                agents.
+                            </li>
+                            <li>
+                                Contributed to backend services for order
+                                workflows and data management.
+                            </li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag sm">NestJS</span>
+                            <span class="tag sm">PostgreSQL</span>
+                        </div>
+                    </article>
+
+                    <!-- Live Chat System -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Live Chat System</h3>
+                            </div>
+                        </div>
+                        <ul class="project-desc-list">
+                            <li>
+                                Developed a real-time customer support chat
+                                system connecting users with available support
+                                agents.
+                            </li>
+                            <li>
+                                Implemented intelligent queue-based agent
+                                assignment using NATS JetStream for efficient
+                                message distribution.
+                            </li>
+                            <li>
+                                Designed waiting-state handling to notify users
+                                when agents are unavailable, improving customer
+                                experience.
+                            </li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag sm">NestJS</span>
+                            <span class="tag sm">PostgreSQL</span>
+                            <span class="tag sm">NATS JetStream</span>
+                        </div>
+                    </article>
+
+                    <!-- Palooi -->
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <h3 class="project-title">Palooi</h3>
+                            </div>
+                            <a
+                                href="https://palooi.us"
+                                target="_blank"
+                                rel="noopener"
+                                class="project-link-icon"
+                                aria-label="View Live">
+                                <svg
+                                    width="18"
+                                    height="18"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                    <polyline points="15 3 21 3 21 9" />
+                                    <line x1="10" y1="14" x2="21" y2="3" />
+                                </svg>
+                            </a>
+                        </div>
+                        <ul class="project-desc-list">
+                            <li>
+                                Built a full-featured e-commerce platform
+                                including cart management, order processing, and
+                                guest checkout.
+                            </li>
+                            <li>
+                                Integrated Stripe payment gateway to support
+                                secure online transactions.
+                            </li>
+                            <li>
+                                Designed backend services to handle product
+                                catalogs, order lifecycle, and customer
+                                operations.
+                            </li>
+                        </ul>
+                        <div class="project-tags">
+                            <span class="tag sm">Node.js</span>
+                            <span class="tag sm">Express.js</span>
+                            <span class="tag sm">MongoDB</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- UNCHANGED: DevOps Projects Section -->
+            <section class="section" id="devops">
+                <h2>DevOps Projects</h2>
+                <div class="devops-grid">
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>EKS Auto Mode Cluster Provisioning</h3>
+                        </div>
+                        <p>
+                            Production-grade Kubernetes cluster on AWS EKS Auto
+                            Mode using Terraform. Includes VPC with
+                            public/private subnets, managed node groups, IAM
+                            IRSA, and cluster autoscaler configuration.
+                        </p>
+                        <div class="devops-tags">
+                            <span class="tag sm">Terraform</span>
+                            <span class="tag sm">AWS EKS</span>
+                            <span class="tag sm">Kubernetes</span>
+                            <span class="tag sm">IAM</span>
+                        </div>
+                    </article>
+
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>GitOps Deployment with ArgoCD</h3>
+                        </div>
+                        <p>
+                            Implemented GitOps workflow using ArgoCD for
+                            continuous delivery. App-of-apps pattern with Helm
+                            charts, automated sync policies, and rollback
+                            capabilities for multi-environment deployments.
+                        </p>
+                        <div class="devops-tags">
+                            <span class="tag sm">ArgoCD</span>
+                            <span class="tag sm">Helm</span>
+                            <span class="tag sm">Kubernetes</span>
+                            <span class="tag sm">GitOps</span>
+                        </div>
+                    </article>
+
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>Observability Stack — Prometheus + Grafana</h3>
+                        </div>
+                        <p>
+                            Deployed a full observability platform using
+                            kube-prometheus-stack. Custom dashboards for service
+                            SLOs, Loki for log aggregation, and Alertmanager for
+                            PagerDuty/Slack alerting.
+                        </p>
+                        <div class="devops-tags">
+                            <span class="tag sm">Prometheus</span>
+                            <span class="tag sm">Grafana</span>
+                            <span class="tag sm">Loki</span>
+                            <span class="tag sm">Alertmanager</span>
+                        </div>
+                    </article>
+
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>Multi-Service Kafka Event Pipeline</h3>
+                        </div>
+                        <p>
+                            Designed an event-driven microservices architecture
+                            using Kafka as the backbone. Producer/consumer
+                            services in Go with schema registry, dead-letter
+                            queues, and consumer group rebalancing.
+                        </p>
+                        <div class="devops-tags">
+                            <span class="tag sm">Kafka</span>
+                            <span class="tag sm">Go</span>
+                            <span class="tag sm">Docker</span>
+                            <span class="tag sm">Microservices</span>
+                        </div>
+                    </article>
+
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>
+                                Pulumi IaC — Cloud Infrastructure Automation
+                            </h3>
+                        </div>
+                        <p>
+                            Infrastructure automation with Pulumi using
+                            TypeScript. Covers multi-region AWS deployments: ECS
+                            services, RDS clusters, S3/CloudFront, and secrets
+                            management with AWS Secrets Manager.
+                        </p>
+                        <div class="devops-tags">
+                            <span class="tag sm">Pulumi</span>
+                            <span class="tag sm">TypeScript</span>
+                            <span class="tag sm">AWS</span>
+                            <span class="tag sm">ECS</span>
+                        </div>
+                    </article>
+
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>DevSecOps CI/CD Pipeline</h3>
+                        </div>
+                        <p>
+                            10-stage GitHub Actions pipeline with integrated
+                            security gates: Trivy image scanning, Semgrep SAST,
+                            Checkov IaC linting, OWASP dependency audit, and
+                            automated SBOM generation.
+                        </p>
+                        <div class="devops-tags">
+                            <span class="tag sm">GitHub Actions</span>
+                            <span class="tag sm">Trivy</span>
+                            <span class="tag sm">Semgrep</span>
+                            <span class="tag sm">OWASP</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- NEW: Education & Publications Section -->
+            <section class="section" id="education">
+                <h2>Education & Publications</h2>
+                <div class="edu-pub-grid">
+                    <div class="edu-card">
+                        <div class="edu-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>Education</h3>
+                        </div>
+                        <div class="edu-item">
+                            <h4>Green University of Bangladesh</h4>
+                            <p class="edu-degree">
+                                B.Sc. in Computer Science and Engineering
+                            </p>
+                            <p class="edu-date">Jan 2020 – Jan 2024</p>
+                            <p class="edu-cgpa">CGPA: 3.23 / 4</p>
+                        </div>
+                    </div>
+                    <div class="edu-card">
+                        <div class="edu-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>Publications</h3>
+                        </div>
+                        <div class="pub-item">
+                            <h4>
+                                Pneumonia Detection from Chest X-Ray Images
+                                Using Convolutional Neural Network
+                            </h4>
+                            <a
+                                href="https://ieeexplore.ieee.org/document/10499549"
+                                target="_blank"
+                                rel="noopener"
+                                class="pub-link">
+                                ieeexplore.ieee.org/document/10499549
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NEW: Currently Forging Section -->
+            <section class="section" id="learning">
+                <h2>Currently Forging</h2>
+                <div class="devops-grid">
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>Distributed Systems and Deployment</h3>
+                        </div>
+                        <p>
+                            Deep diving into distributed architectures,
+                            consensus algorithms, and scalable deployment
+                            strategies.
+                        </p>
+                    </article>
+                    <article class="devops-card">
+                        <div class="devops-card-header">
+                            <div class="devops-icon">&#9670;</div>
+                            <h3>System Design</h3>
+                        </div>
+                        <p>
+                            Studying high-level system design, scalability
+                            patterns, and designing robust, large-scale backend
+                            systems.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="contact">
+                <h2>Get in Touch</h2>
+                <div class="contact-links">
+                    <a
+                        href="https://github.com/mostafizur-raahman"
+                        target="_blank"
+                        rel="noopener"
+                        class="contact-btn"
+                        >GitHub</a
+                    >
+                    <a href="mailto:mostafizur@example.com" class="contact-btn"
+                        >Email</a
+                    >
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Mostafizur Rahman</p>
+        </footer>
+
+        <script>
+            // Mobile nav toggle
+            const toggle = document.getElementById("navToggle");
+            const links = document.getElementById("navLinks");
+            toggle.addEventListener("click", () => {
+                links.classList.toggle("open");
+                toggle.classList.toggle("active");
+            });
+            // Close on link click
+            links.querySelectorAll("a").forEach((a) => {
+                a.addEventListener("click", () => {
+                    links.classList.remove("open");
+                    toggle.classList.remove("active");
+                });
+            });
+            // Active nav highlight on scroll
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll(".nav-link");
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((e) => {
+                        if (e.isIntersecting) {
+                            navLinks.forEach((l) => {
+                                l.classList.toggle(
+                                    "active",
+                                    l.getAttribute("href") ===
+                                        "#" + e.target.id,
+                                );
+                            });
+                        }
+                    });
+                },
+                { threshold: 0.4 },
+            );
+            sections.forEach((s) => observer.observe(s));
+        </script>
+    </body>
+</html>
