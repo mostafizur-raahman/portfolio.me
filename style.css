@@ -218,38 +218,6 @@ main {
     gap: 8px;
 }
 
-/* Hero Tags with Icons */
-.hero-tags .tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 12px;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--text-muted);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    transition: all 0.2s;
-}
-
-.hero-tags .tag:hover {
-    border-color: var(--accent-dim);
-    color: var(--text);
-    background: var(--accent-faint);
-    transform: translateY(-2px);
-}
-
-.hero-tags .tag svg {
-    flex-shrink: 0;
-    opacity: 0.8;
-}
-
-.hero-tags .tag:hover svg {
-    opacity: 1;
-    color: var(--accent);
-}
-
 /* ─── SECTION ────────────────────────────────────── */
 .section {
     margin-bottom: 88px;

@@ -255,11 +255,11 @@
                         <div>
                             <span class="project-badge">Featured</span>
                             <h3 class="project-title">
-                                K8s-MasterStack — Cloud-Native 3-Tier App
+                                Full-Stack Todo App — Deployed on AWS EKS
                             </h3>
                         </div>
                         <a
-                            href="https://github.com/mostafizur-raahman/K8s-MasterStack-Cloud-Native-3-Tier-App"
+                            href="https://github.com/mostafizur-raahman/Deploying-a-Full-Stack-Application-on-EKS"
                             target="_blank"
                             rel="noopener"
                             class="project-link-icon"
@@ -279,14 +279,14 @@
                         </a>
                     </div>
                     <p class="project-desc">
-                        A scalable, cloud-native three-tier web application
-                        deployed on AWS EKS. The architecture features a
-                        React.js frontend, a Node.js backend, and a MongoDB
-                        database, fully containerized with Docker. The
-                        deployment lifecycle is automated using Kubernetes
-                        manifests, with traffic management and public access
-                        handled via the AWS Load Balancer Controller and Ingress
-                        routing.
+                        A production-ready full-stack Todo application deployed
+                        on AWS EKS. The architecture features a React.js
+                        frontend served via Nginx, a Flask REST API backend, and
+                        a PostgreSQL database — fully containerized with Docker
+                        and orchestrated using Kubernetes manifests. External
+                        access is handled via an AWS LoadBalancer with Nginx
+                        reverse proxy routing frontend traffic and proxying API
+                        requests to the backend.
                     </p>
 
                     <!-- Architecture Flow -->
@@ -299,7 +299,12 @@
                             </div>
                             <div style="color: var(--text-faint)">→</div>
                             <div class="flow-item">
-                                <span style="color: var(--accent)">🐳</span>
+                                <span>🐍</span>
+                                <span>Flask</span>
+                            </div>
+                            <div style="color: var(--text-faint)">→</div>
+                            <div class="flow-item">
+                                <span>🐳</span>
                                 <span>Docker</span>
                             </div>
                             <div style="color: var(--text-faint)">→</div>
@@ -310,7 +315,7 @@
                             <div style="color: var(--text-faint)">→</div>
                             <div class="flow-item">
                                 <span style="color: #326ce5">⚖</span>
-                                <span>ALB Ingress</span>
+                                <span>AWS LB</span>
                             </div>
                         </div>
                     </div>
@@ -319,10 +324,11 @@
                         <div class="highlight">
                             <span class="highlight-icon">&#9650;</span>
                             <div>
-                                <strong>3-Tier Architecture</strong>
+                                <strong>Full-Stack Architecture</strong>
                                 <span
-                                    >React.js + Node.js + MongoDB — fully
-                                    decoupled, containerized layers</span
+                                    >React.js + Flask + PostgreSQL — fully
+                                    decoupled, containerized layers with Nginx
+                                    reverse proxy</span
                                 >
                             </div>
                         </div>
@@ -332,27 +338,29 @@
                                 <strong>Orchestration on AWS EKS</strong>
                                 <span
                                     >Deployment lifecycle automated using
-                                    Kubernetes manifests, eksctl, and Helm</span
+                                    Kubernetes manifests and eksctl with managed
+                                    node groups</span
                                 >
                             </div>
                         </div>
                         <div class="highlight">
                             <span class="highlight-icon">&#9650;</span>
                             <div>
-                                <strong>Advanced Networking & Routing</strong>
+                                <strong>Multi-Replica & Health Checks</strong>
                                 <span
-                                    >Traffic management and public access via
-                                    AWS ALB and Ingress Controller</span
+                                    >Liveness and readiness probes ensuring
+                                    zero-downtime rollouts and
+                                    auto-recovery</span
                                 >
                             </div>
                         </div>
                         <div class="highlight">
                             <span class="highlight-icon">&#9650;</span>
                             <div>
-                                <strong>Cloud-Native Scalability</strong>
+                                <strong>Secure Config Management</strong>
                                 <span
-                                    >Fully containerized with Docker on a
-                                    scalable AWS EKS cluster</span
+                                    >Credentials via Kubernetes Secrets and
+                                    Nginx config via ConfigMap</span
                                 >
                             </div>
                         </div>
@@ -360,13 +368,13 @@
 
                     <div class="project-tags">
                         <span class="tag sm">React.js</span>
-                        <span class="tag sm">Node.js</span>
-                        <span class="tag sm">MongoDB</span>
+                        <span class="tag sm">Flask</span>
+                        <span class="tag sm">PostgreSQL</span>
                         <span class="tag sm">Docker</span>
                         <span class="tag sm">AWS EKS</span>
                         <span class="tag sm">Kubernetes</span>
-                        <span class="tag sm">Helm</span>
-                        <span class="tag sm">AWS ALB</span>
+                        <span class="tag sm">Nginx</span>
+                        <span class="tag sm">AWS LoadBalancer</span>
                     </div>
                 </article>
 
